@@ -29,14 +29,6 @@ let package = Package(
         .target(
             name: "CEvanAudioKit",
             dependencies: ["AudioKit", "Soundpipe"],
-            exclude: [
-                "AudioKitCore/Modulated Delay/README.md",
-                "AudioKitCore/Sampler/Wavpack/license.txt",
-                "AudioKitCore/Common/README.md",
-                "AudioKitCore/Common/Envelope.hpp",
-                "AudioKitCore/Sampler/README.md",
-                "AudioKitCore/README.md",
-            ],
             publicHeadersPath: "include",
             cxxSettings: [
                 .headerSearchPath(".")]),
