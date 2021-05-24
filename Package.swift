@@ -16,9 +16,7 @@ let package = Package(
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/AudioKit/Soundpipe", .branch("main")),
         .package(url: "https://github.com/AudioKit/AudioKit", .branch("develop")),
-        .package(url: "https://github.com/AudioKit/DunneAudioKit", .branch("develop"))
 
     ],
     targets: [
@@ -26,15 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "EvanAudioKit",
-            dependencies: ["AudioKit", "CEvanAudioKit"]),
-        .target(
-            name: "CEvanAudioKit",
-            dependencies: ["AudioKit", "DunneAudioKit", "Soundpipe"],
-            exclude: [
-            ],
-            publicHeadersPath: "include",
-            cxxSettings: [
-                .headerSearchPath(".")]),
+            dependencies: ["AudioKit"]),
         .testTarget(
             name: "EvanAudioKitTests",
             dependencies: ["EvanAudioKit"],
