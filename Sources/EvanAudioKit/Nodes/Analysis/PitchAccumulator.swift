@@ -7,7 +7,7 @@
 
 import AudioKit
 
-class PitchAccumulator {
+public class PitchAccumulator {
     init() {
         print("Hello World!")
     }
