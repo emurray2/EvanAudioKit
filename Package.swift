@@ -29,6 +29,8 @@ let package = Package(
         .target(
             name: "CEvanAudioKit",
             dependencies: ["AudioKit", "Soundpipe"],
+            exclude: [
+            ],
             publicHeadersPath: "include",
             cxxSettings: [
                 .headerSearchPath(".")]),
